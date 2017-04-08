@@ -1,0 +1,52 @@
+{"frames": {
+
+"oil.png":
+{
+	"frame": {"x":387,"y":1,"w":76,"h":111},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":3,"w":76,"h":111},
+	"sourceSize": {"w":86,"h":118}
+},
+"star.png":
+{
+	"frame": {"x":387,"y":114,"w":61,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":61,"h":60},
+	"sourceSize": {"w":61,"h":60}
+},
+"tornado0.png":
+{
+	"frame": {"x":1,"y":1,"w":127,"h":174},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":6,"w":127,"h":174},
+	"sourceSize": {"w":140,"h":190}
+},
+"tornado1.png":
+{
+	"frame": {"x":130,"y":1,"w":127,"h":166},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":6,"w":127,"h":166},
+	"sourceSize": {"w":140,"h":190}
+},
+"tornado2.png":
+{
+	"frame": {"x":259,"y":1,"w":126,"h":163},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":11,"w":126,"h":163},
+	"sourceSize": {"w":140,"h":190}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "reward.png",
+	"format": "RGBA8888",
+	"size": {"w":464,"h":176},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:3a9d70d3b74c1966e25a2616be40360e:46ac5c6e9ad1aa9f10a0c0873d580e7b:5f39c3000656559706bd3de2c27cccb8$"
+}
+}

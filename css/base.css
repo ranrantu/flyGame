@@ -1,0 +1,268 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html,body {
+    font-family:'Raleway', sans-serif;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 200;
+    src: url(http://mil.sohu.com/upload/flyGame_t2/css/Raleway-ExtraLight.ttf);
+}
+#game-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.contain {
+    background: transparent;
+    background-size: auto 100% ! important;
+    background-position: center;
+    
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 375px;
+    height: 603px;
+    margin-top: -301.5px;
+    margin-left: -187.5px;
+    -webkit-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    overflow: hidden;
+}
+#landscape {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: none;
+}
+#landscape .ldcontent {
+    position: absolute;
+    background: url(../images/landscape.png) no-repeat;
+    background-size: 100% auto;
+    width: 120px;
+    height: 200px;
+    top: 50%;
+    margin-top: -100px;
+    left: 50%;
+    margin-left: -60px;
+    opacity: .8;
+    z-index: 100;
+    color: #fff;
+}
+#landscape .ldcontent span {
+    bottom: 0px;
+    width: 200px;
+    margin-left: -40px;
+    position: absolute;
+    font-size: 15px;
+    text-align: center;
+}
+/* 加载资源面板 */
+.mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #00486c;
+}
+.mask img {
+    width: 280px;
+    height: 210px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -140px;
+    margin-top: -115px;
+    -webkit-transform:rotateZ(90deg);
+    transform:rotateZ(90deg);
+}
+/*.mask .loader {
+    width: 57px;
+    height: 57px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -28.5px;
+    margin-top: -28.5px;
+}*/
+
+.control {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.control .energyContainer {
+    background: url(../images/energyContainer.png) no-repeat;
+    background-size: 100% auto;
+    position: fixed;
+    width: 43px;
+    height: 250px;
+}
+.control .energy {
+    background: url(../images/energy.png) no-repeat;
+    background-size: 100% auto;
+    position: absolute;
+    width: 25px;
+    height: 235px;
+}
+.control .score {
+    position: absolute;
+    -webkit-transform-origin:50% 50%;
+    transform-origin:50% 50%;
+    -webkit-transform:rotateZ(90deg);
+    transform:rotateZ(90deg);
+    width: 100px;
+    text-align: center;
+    
+    /*text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);*/
+    color: #fff;
+    font-size:40px;
+    line-height: 40px;
+    vertical-align: baseline;
+    overflow: hidden;
+}
+.mainframe,.againframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.mainframe .startbtn {
+    position: absolute;
+    width: 150px;
+    height: 38px;
+    text-align: center;
+    -webkit-transform-origin:50% 50%;
+    transform-origin:50% 50%;
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    top: 50%;
+    margin-top: -115px;
+    left: 50%;
+    margin-left: -200px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFF;
+    background: url(../images/btn.png) no-repeat;
+    background-size: 100% auto;
+}
+.mainframe .helpbtn {
+    position: absolute;
+    width: 150px;
+    height: 38px;
+    text-align: center;
+    -webkit-transform-origin:50% 50%;
+    transform-origin:50% 50%;
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    top: 50%;
+    margin-top: 75px;
+    left: 50%;
+    margin-left: -200px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #FFF;
+    background: url(../images/btn.png) no-repeat;
+    background-size: 100% auto;
+    background-position: 0 -38px;
+}
+.mainframe .info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: url(../images/dot.png);
+    
+}
+
+.againframe {
+    display: none;
+}
+.againframe .playerscore {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    -webkit-transform-origin:50% 50%;
+    transform-origin:50% 50%;
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+    font-size: 100px;
+    font-weight: 600;
+    color: #fff;
+}
+.againframe .againbtn {
+    position: absolute;
+    width: 150px;
+    height: 38px;
+    text-align: center;
+    -webkit-transform-origin:50% 50%;
+    transform-origin:50% 50%;
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    top: 50%;
+    margin-top: -115px;
+    left: 50%;
+    margin-left: -200px;
+    background: url(../images/sharebtn.png) no-repeat;
+    background-size: 100% auto;
+}
+.againframe .sharebtn {
+    position: absolute;
+    width: 150px;
+    height: 38px;
+    text-align: center;
+    -webkit-transform-origin:50% 50%;
+    transform-origin:50% 50%;
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+    top: 50%;
+    margin-top: 75px;
+    left: 50%;
+    margin-left: -200px;
+    background: url(../images/sharebtn.png) no-repeat;
+    background-size: 100% auto;
+    background-position: 0 -38px;
+}
+.againframe .sharep {
+    background: url(../images/dot.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+}
+.sharetext {
+    background: url(../images/sharetext.png) no-repeat;
+    background-size: 100% auto;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+@media screen and (orientation: portrait) {
+    #landscape {display: none ! important;}
+} 
+@media screen and (orientation: landscape) {
+    #landscape {display: block ! important;}
+    #game-canvas {display: none;}
+    body {background:#000;}
+}

@@ -1,0 +1,19 @@
+GAME.config = {
+	resource:[
+		'images/reward/reward.json',
+		'images/sun.png',
+		'images/cloud1.png',
+		'images/cloud2.png',
+		'images/cloud3.png',
+		'images/mountain-test.png',
+		'images/rainbow.png',
+		'images/screw.png',
+		'images/road.jpg',
+		'images/background.jpg',
+		'images/circle.png',
+		'images/moveButton.png',
+		'images/mask.png',
+		'images/aircraft-test.png',
+		'images/aircraft-red.png'
+	]
+};

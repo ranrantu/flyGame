@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<title>flyGame</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/loader.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/pixi.min.js"></script>
+	<script src="js/hansen.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/buttons.js"></script>
+	<script src="js/background.js"></script>
+	<script src="js/info.js"></script>
+	<script src="js/around.js"></script>
+	<script src="js/reward.js"></script>
+	<script src="js/commonFunction.js"></script>
+</head>
+<style>
+	body {
+		overflow: hidden;
+	}
+	#console {
+		position: fixed;
+		width: 200px;
+		height: 200px;
+		bottom: 0px;
+		right: 0px;
+		background: #fff;
+		overflow: scroll;
+	}
+</style>
+<body>
+	<canvas id="game-canvas"></canvas>
+	<div id="control" class="control">
+		<div id="score" class="score startprocess">0</div>
+		<div id="energyContainer" class="energyContainer startprocess">
+			<div id="energy" class="energy"></div>
+		</div>
+	</div>
+	<div id="mainframe" class="mainframe">
+		<div class="contain">
+			<div id="startbtn" class="startbtn"><br></div>
+			<div id="helpbtn" class="helpbtn"><br></div>
+		</div>
+		<div id="info" class="info">
+			<div class="contain">
+			</div>
+		</div>
+	</div>
+	<div id="againframe" class="againframe">
+		<div class="contain">
+			<div id="playerscore" class="playerscore"></div>
+			<div id="againbtn" class="againbtn"></div>
+			<div id="sharebtn" class="sharebtn"></div>
+		</div>
+		<div id="sharep" class="sharep">
+			<div class="contain">
+				<div class="sharetext"></div>
+			</div>
+		</div>
+	</div>
+	<div id="mask" class="mask">
+		<div class="contain">
+			<img src="images/0.gif" alt="">
+		</div>
+	</div>
+	<!-- <div id="console"></div> -->
+	<div id="landscape">
+		<div class="ldcontent">
+			<span>请把您的手机锁定在竖屏状态</span>
+		</div>
+	</div>
+	<script src="js/init.js"></script>
+	<script>
+	var loader = PIXI.loader;
+	reward = new GAME.reward();
+	for(var i=0;i<GAME.config['resource'].length;i++){
+		loader.add(GAME.config['resource'][i]);
+	}
+	loader.once('complete',GAME.init);
+	loader.once('complete',reward.onRewardLoaded);
+	loader.load();
+
+	containStatus();
+	</script>
+</body>
+</html>
